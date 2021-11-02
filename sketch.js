@@ -1,13 +1,13 @@
-
-var player;
-var platform;
+var player,player2;
+var platform,platform2;
 var player_image, platform_image;
 
 function preload(){
   player_image=loadImage("images/jack2.png")
   platform_image = loadImage("images/p1.png");
+  player2_image=loadImage("images/jack1.png")
+  platform2_image = loadImage("images/p2.png");
 }
-
 function setup() {
   createCanvas(500, 500);
   player = createSprite(250,300,20,50);
@@ -17,6 +17,12 @@ function setup() {
   platform.addImage("platform", platform_image)
   platform.scale=0.15
 
+  player2 = createSprite(350,300,20,50);
+  platform2 = createSprite(350,350,100,10);
+  
+  player2.addImage("player",player2_image)
+  platform2.addImage("platform", platform_image)
+  platform2.scale=0.15
 }
 
 function draw() {
@@ -29,10 +35,3 @@ function draw() {
 
   drawSprites();
 }
-
-
-
-
-
-
-
